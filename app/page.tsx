@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ProductCard from "./components/ProductCard";
 import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+import { authOptions } from "./api/auth/[...nextauth]/auth_options";
 import CoffeeImage from "@/public/images/coffee.jpg";
 
 export default async function Home() {
