@@ -3,6 +3,7 @@ import Link from "next/link";
 import ProductCard from "./components/ProductCard";
 import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/route";
+import CoffeeImage from "@/public/images/coffee.jpg";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
@@ -13,8 +14,7 @@ export default async function Home() {
         Hello,{" "}
         {session ? <span>{session.user!.name}</span> : <span>world</span>}!!!
       </h1>
-      <Link href="/users">Users</Link>
-      <ProductCard />
+      <Image width={400} src={CoffeeImage} alt="Image of coffee being poured" />
     </main>
   );
 }
